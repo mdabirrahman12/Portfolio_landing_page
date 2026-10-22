@@ -1,0 +1,140 @@
+/* --- GLOBAL RESET --- */
+/* This removes default spacing and makes layout easier */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* --- 1. HEADER / HERO SECTION --- */
+.header-section {
+    background-image: url('images/header_bg.png'); 
+    background-size: cover; /* Makes image cover the whole screen */
+    background-position: center;
+    padding: 20px 50px;
+    /* Flexbox makes items stand in a row */
+    display: flex; 
+    flex-direction: column;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between; /* Pushes items to far left and right */
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: black;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.hero-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-text {
+    width: 50%;
+}
+
+.hero-text h1 {
+    font-size: 50px;
+    margin: 10px 0;
+}
+
+.hero-text p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.buttons button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn-primary {
+    background-color: #FF6B00; /* Orange color */
+    color: white;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid #FF6B00;
+    color: #FF6B00;
+}
+
+.hero-image img {
+    width: 400px;
+    height: auto;
+}
+
+/* --- 2. ABOUT ME SECTION --- */
+.about-section {
+    padding: 50px;
+    background-color: #FFF8F3;
+}
+
+.about-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Flexbox puts text and details side by side */
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    max-width: 900px;
+    margin: 0 auto; /* Centers the container */
+}
+
+.about-text {
+    width: 60%;
+}
+
+.about-details ul {
+    list-style: none; /* Removes bullet points */
+}
+
+.about-details li {
+    margin-bottom: 10px;
+}
+
+/* --- 3. WHAT I DO SECTION --- */
+.skills-section {
+    padding: 50px;
+}
+
+.skills-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* This is the magic that makes a 4-column grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    gap: 20px; /* Space between boxes */
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.skill-card {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1); /* Soft shadow */
+    border-radius: 8px;
+}
+
+.skill-card img {
+    width: 40px;
+    margin-bottom: 10px;
+}
